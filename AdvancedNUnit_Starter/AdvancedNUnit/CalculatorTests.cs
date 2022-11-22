@@ -11,11 +11,11 @@ namespace AdvancedNUnit
         [SetUp]
         public void Setup() { }
 
-        [Test]
-        public void Add_Always_ReturnsExpectedResult()
+        [TestCaseSource(nameof(AddCases))]
+        [Category("Error Path")]
+        public void Add_Always_ReturnsExpectedResult(int x, int y, int expectedResult)
         {
             // Arrange
-            var expectedResult = 6;
             var subject = new Calculator { Num1 = 2, Num2 = 4 };
             // Act
             var result = subject.Add();
@@ -23,7 +23,13 @@ namespace AdvancedNUnit
             Assert.That(result, Is.EqualTo(expectedResult), "optional failure message");
         }
 
+        private static object[] AddCases = {
+                new int[] {2, 4, 6},
+                new int[] {-2, 3, 1}
+        };
+
         [Test]
+        [Category("Happy Path")]
         public void DivisibleBy3_GivenInputOf6_ReturnsTrue()
         {
             // Arrange
@@ -41,6 +47,7 @@ namespace AdvancedNUnit
         }
 
         [Test]
+        [Category("Happy Path")]
         public void DivisibleBy3_GivenInputOf7_ReturnsFalse()
         {
             // Arrange
@@ -58,6 +65,7 @@ namespace AdvancedNUnit
         }
 
         [Test]
+        [Category("Happy Path")]
         public void ToString_ContainsTheStringCalculator()
         {
             // Arrange
@@ -81,6 +89,7 @@ namespace AdvancedNUnit
         }
 
         [Test]
+        [Category("Happy Path")]
         public void CollectionContraintsExercise()
         {
             var trainers = new string[] { "Laura", "Joe", "Phil", "Neil", "Martin", "Cathy" };

@@ -2,11 +2,20 @@
 
 namespace AdvancedNUnit
 {
-    [TestFixture]
-    [Ignore("Not using these tests yet")]
+    
+    //[Ignore("Not using these tests yet")]
     public class CounterTests
     {
-        private Counter _sut = new Counter(6);
+
+        private Counter _sut;
+
+        [SetUp]
+        private void CreateSut()
+        {
+            _sut = new Counter(6);
+        }
+
+        
 
         [Test]
         public void Increment_IncreaseCountByOne()
