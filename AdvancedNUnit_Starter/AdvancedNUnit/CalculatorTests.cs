@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using CategoryAttribute = NUnit.Framework.CategoryAttribute;
 
 namespace AdvancedNUnit
 {
@@ -12,7 +13,7 @@ namespace AdvancedNUnit
         public void Setup() { }
 
         [TestCaseSource(nameof(AddCases))]
-        [Category("Error Path")]
+        [NUnit.Framework.Category("Error Path")]
         public void Add_Always_ReturnsExpectedResult(int x, int y, int expectedResult)
         {
             // Arrange
