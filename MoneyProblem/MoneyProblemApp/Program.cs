@@ -4,31 +4,29 @@
     {
         static void Main(string[] args)
         {
-            double[] currency = { 2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01 };
-            
-
-            int[] currencyCount = MoneyMaker(5.47, currency);
-            for (int i = 0; i < currency.Length; i++)
+            int[] currencyValue = new int[] { 200, 100, 50, 20, 10, 5, 2, 1 };
+            int[] currencyCount = MoneyMaker(547);
+            for (int i = 0; i < currencyCount.Length; i++)
             {
-                Console.WriteLine($"{currency[i]:C} {currencyCount[i]}");
+                Console.WriteLine($"{(double)currencyValue[i]/100:C} {currencyCount[i]}");
             }
         }
 
-        public static int[] MoneyMaker(double total, double[] currencyValue) 
+        public static int[] MoneyMaker(int total)
         {
-            int[] CurrencyCount = { 0, 0, 0, 0, 0, 0, 0, 0};
+            if (total < 0) { throw new ArgumentException(); }
 
-            for (int i = 0; i < CurrencyCount.Length; i++)
+            int[] currencyValue = new int[] {200, 100, 50, 20, 10, 5, 2, 1};
+            int[] currencyCount = new int[] { 0, 0, 0, 0, 0, 0, 0, 0 };
+
+            for (int i = 0; i < currencyValue.Length; i++)
             {
-                
-                while (total >= currencyValue[i])
-                {
-                    CurrencyCount[i]++;
-                    total -= currencyValue[i];
-                }
+                currencyCount[i] = total / currencyValue[i];
+                total %= currencyValue[i];
             }
 
-            return CurrencyCount;
+            if (total > 0) { throw new Exception(); }
+            return currencyCount;
         }
     }
 }

@@ -10,7 +10,7 @@ namespace SafariParkApp
     {
         private string _firstName = "";
         private string _lastName = " ";
-
+        private string _age;
 
 
         public Person(string firstName, string lastName, int age = 0)
