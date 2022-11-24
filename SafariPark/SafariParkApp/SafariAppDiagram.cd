@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="System.Object">
+    <Position X="10.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
   <Class Name="SafariParkApp.Person">
     <Position X="10" Y="4.5" Width="3.25" />
     <InheritanceLine Type="System.Object" FixedFromPoint="true">
@@ -11,13 +15,9 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAAAAAEEAAAAAAAAAAAgIAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAEAAAAAAAIAAAEAAAAAAAAAAAAgAAAAAAAAAAAg=</HashCode>
       <FileName>person.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="System.Object">
-    <Position X="10.75" Y="0.5" Width="2.25" />
-    <TypeIdentifier />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -8,27 +8,41 @@ namespace SafariParkApp
 {
     internal class Person
     {
-        private string _firstName = "";
-        private string _lastName = " ";
-        private string _age;
+        private int _age;
 
+        public int Age
+        {
+            get { return _age; }
+            set
+            {
+                if (Age < 0)
+                {
+                    throw new ArgumentException();
+                }
+                _age = value;
+            }
+        }
+        public string FirstName { get; init; } = "";
+        public string LastName { get; init; } = "";
+
+
+        public Person(string firstname)
+        {
+            FirstName = firstname;
+        }
 
         public Person(string firstName, string lastName, int age = 0)
         {
-            _firstName = firstName;
-            _lastName = lastName;
+            FirstName = firstName;
+            LastName = lastName;
             Age = age;
         }
 
-
-
-        public int Age { get; set; }
-
-
-
-        public string GetFullName()
+        public Person()
         {
-            return $"{_firstName} {_lastName}";
+
         }
+
+        public string FullName => $"{FirstName} {LastName}";
     }
 }
