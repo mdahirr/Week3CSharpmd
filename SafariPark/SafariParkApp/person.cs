@@ -9,7 +9,8 @@ namespace SafariParkApp
     internal class Person
     {
         private int _age;
-
+        private string _firstName;
+        private string _lastName;
         public int Age
         {
             get { return _age; }
@@ -22,9 +23,9 @@ namespace SafariParkApp
                 _age = value;
             }
         }
-        public string FirstName { get; init; } = "";
-        public string LastName { get; init; } = "";
 
+        public string FirstName { get => _firstName; set => _firstName = value; }
+        public string LastName { get => _lastName; set => _lastName = value; }
 
         public Person(string firstname)
         {
@@ -43,6 +44,11 @@ namespace SafariParkApp
 
         }
 
-        public string FullName => $"{FirstName} {LastName}";
+        public string GetFullName() => $"{_firstName} {_lastName}";
+
+        public override string ToString()
+        {
+            return $"{base.ToString()} Name: {GetFullName()} Age: {Age}";
+        }
     }
 }

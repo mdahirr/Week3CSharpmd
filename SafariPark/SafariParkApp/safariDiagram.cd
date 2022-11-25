@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SafariParkApp.Hunter">
+    <Position X="1.5" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAEAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Hunter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SafariParkApp.Person">
+    <Position X="1.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAEAEEAAAAAAAAAAAgIAAAAAAAAAAA=</HashCode>
+      <FileName>person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SafariParkApp.Vehicle">
+    <Position X="3.75" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAoAAAAAgEAAAAAQBAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vehicle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SafariParkApp.Airplane">
+    <Position X="3.75" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAIAAAAAEAAAAggAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Airplane.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SafariParkApp.Program" Collapsed="true">
+    <Position X="5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="SafariParkApp.Point3D" Collapsed="true">
+    <Position X="7" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAQAAAAA=</HashCode>
+      <FileName>Point3D.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
