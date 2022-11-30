@@ -149,22 +149,102 @@
             //    Console.WriteLine(s);
             //}
 
-            var theBeatles = new Dictionary<int, string>() { { 2, "Paul" }, { 3, "Ringo" }, { 1, "John" }, { 4, "George" } };
-            var isAdded = theBeatles.TryAdd(3, "Laura");
-            var beatlesList = theBeatles.Values.ToList();
-            var c = theBeatles.Remove(1);
-            var d = theBeatles.Keys.Where(x => x % 2 == 0).Sum();
+            //var theBeatles = new Dictionary<int, string>() { { 2, "Paul" }, { 3, "Ringo" }, { 1, "John" }, { 4, "George" } };
+            //var isAdded = theBeatles.TryAdd(3, "Laura");
+            //var beatlesList = theBeatles.Values.ToList();
+            //var c = theBeatles.Remove(1);
+            //var d = theBeatles.Keys.Where(x => x % 2 == 0).Sum();
 
 
 
-            Console.WriteLine(isAdded);
+            //Console.WriteLine(isAdded);
 
 
 
-            foreach (var el in beatlesList)
+            //foreach (var el in beatlesList)
+            //{
+            //    Console.WriteLine(el);
+            //}
+
+            //Console.WriteLine("\nKeys");
+            //foreach (var key in countDict.Keys)
+            //{
+            //    Console.Write(key + " ");
+            //}
+            //Console.WriteLine("\nValues");
+            //foreach (var value in countDict.Values)
+            //{
+            //    Console.Write(value + " ");
+            //}
+
+
+            //var bobOne = new Person("Bob", "builder") { Age = 25 };
+
+            //var bobTwo = bobOne;
+
+            //var areSame = bobOne.Equals(bobTwo);  //true
+
+            //var bobThree = new Person("Bob", "Builder") { Age = 25 };
+
+            //var areAlsoSame = bobOne.Equals(bobThree); // false
+
+            //var equals = bobOne == bobThree; // should be true
+
+            //var notEquals = bobOne != bobThree; // should be false
+
+            //var bob4 = new Person("bob", "Baker") { Age = 32 };
+
+            //List<Person> personList = new List<Person>
+            //{
+            //    bobOne, bobTwo, bobThree, bob4
+            //};
+            //personList.Sort();
+
+            var helen = new Person { FirstName = "Helen", LastName = "Troy", Age = 22 };
+
+            var peopleSet = new HashSet<Person>
             {
-                Console.WriteLine(el);
+                helen,
+                new Person("Jasmine", "Carter"),
+                new Person("Andrei", "Masters")
+            };
+
+            var successMartin = peopleSet.Add(
+            new Person
+            {
+                FirstName = "Martin",
+                LastName = "Beard"
+            });
+
+            var successHelen = peopleSet.Add(
+                new Person
+                {
+                    FirstName = "Helen",
+                    LastName = "Troy",
+                    Age = 22
+                });
+
+            var morePeople = new HashSet<Person>{
+                new Person("Cathy", "French"),
+                new Person("Jasmine", "Carter")
+            };
+
+            peopleSet.IntersectWith(morePeople);
+
+            var vehicleSet = new HashSet<Vehicle>()
+            {
+                new Vehicle{ NumPassengers = 3, Speed = 2},
+                new Vehicle{Speed = 100}
+            };
+            var successVehicle = vehicleSet.Add(new Vehicle { Speed = 100 });
+
+            Console.WriteLine("HashSet");
+            foreach (var entry in peopleSet)
+            {
+                Console.WriteLine(entry);
             }
+
+            Console.WriteLine();
         }
     }
 }
