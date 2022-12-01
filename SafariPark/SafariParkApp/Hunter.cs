@@ -18,8 +18,8 @@ namespace SafariParkApp
         public Hunter(string fName, string lName, string camera = "") : base(fName, lName)
         {
             this._camera = camera;
-            _firstname= fName;
-            _lastname= lName;
+            _firstname = fName;
+            _lastname = lName;
         }
 
         public string FirstName { get => _firstname; set => _firstname = value; }

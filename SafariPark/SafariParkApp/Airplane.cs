@@ -19,33 +19,36 @@ namespace SafariParkApp
 
         }
 
-        public Airplane(int capacity, int speed) : base(capacity, speed)
+        public Airplane(int capacity, int speed, string airline) : base(capacity, speed)
         {
-            Airline = _airline;
+            _airline = airline;
         }
 
         public void Ascend(int distance)
         {
-
+            Altitude += distance;
         }
 
         public void Descend(int distance)
         {
-
+            var newAltitude = Altitude - distance;
+            Altitude = newAltitude > 0 ? newAltitude : 0;
         }
 
         public override string Move()
         {
-            return "";
+            var message = base.Move();
+            return $"{message} at an altitude of {Altitude} metres.";
         }
         public override string Move(int times)
         {
-            return "";
+            var message = base.Move(times);
+            return $"{message} at an altitude of {Altitude} metres.";
         }
 
         public override string ToString()
         {
-            return base.ToString();
+            return $"thank you for flying {_airline}: {base.ToString()} altitude: {Altitude}.";
         }
     }
 }

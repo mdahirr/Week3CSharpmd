@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SafariParkApp
 {
-    internal class Person : IEquatable<Person?>, IComparable<Person>
+    internal class Person : IMoveable //IEquatable<Person?>, IComparable<Person>
     {
         private int _age;
         private string _firstName;
@@ -92,6 +92,16 @@ namespace SafariParkApp
         public static bool operator !=(Person? left, Person? right)
         {
             return !(left == right);
+        }
+
+        public virtual string Move()
+        {
+            return "Moving along";
+        }
+
+        public virtual string Move(int times)
+        {
+            return $"Moving along {times} times";
         }
     }
 }
